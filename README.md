@@ -20,13 +20,13 @@ Anthropic API for production-quality generation whenever you're ready.
 
 The end-to-end demo indexes a sample corpus, retrieves relevant chunks for each query, and generates a grounded response from the retrieved context.
 
-![Smart RAG Demo](docs/screenshots/smart-rag-demo.jpg)
+<img width="1286" height="584" alt="Screenshot 2026-09-06 131946" src="https://github.com/user-attachments/assets/d055dc7a-8094-4dfe-a7be-fd100367ccbc" />
 
 ## Retrieval Evaluation
 
 The demo also reports retrieval-quality metrics including Precision@k, Recall@k, MRR, and NDCG@k over the included evaluation queries.
 
-![Retrieval Evaluation](docs/screenshots/smart-rag-evaluation.jpg)
+<img width="1289" height="566" alt="Screenshot 2026-09-06 132001" src="https://github.com/user-attachments/assets/7ed9d20c-8452-4f16-a1b4-eab0382c3259" />
 
 ## Why these design choices
 

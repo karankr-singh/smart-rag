@@ -1,0 +1,24 @@
+Vector Databases and Similarity Search
+
+A vector database stores high-dimensional numerical representations of data, known as
+embeddings, and enables fast similarity search over them. Unlike traditional databases
+that retrieve exact matches, vector databases retrieve items that are semantically
+similar to a query, even if they share no exact words in common.
+
+The core operation is nearest-neighbor search: given a query vector, find the k vectors
+in the index that are closest under a distance metric such as cosine similarity or
+Euclidean distance. For small datasets, exact brute-force search compares the query
+against every stored vector. For millions or billions of vectors, approximate nearest
+neighbor (ANN) algorithms like HNSW, IVF, or product quantization trade a small amount
+of recall for massive speed gains.
+
+Popular vector database systems include Pinecone, Weaviate, Milvus, Qdrant, and
+pgvector (a PostgreSQL extension). Many also support hybrid search, combining dense
+vector similarity with traditional keyword filters or metadata constraints, which is
+especially useful when users need both semantic relevance and exact filtering, such as
+"find similar products under $50 in the electronics category."
+
+Choosing an index type involves a tradeoff between build time, memory usage, query
+latency, and recall accuracy. HNSW graphs generally offer the best latency-recall
+tradeoff for in-memory workloads, while IVF-based indexes scale more gracefully to
+disk-backed, very large collections.

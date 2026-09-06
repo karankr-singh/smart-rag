@@ -1,0 +1,22 @@
+Text Embeddings
+
+A text embedding is a dense vector of real numbers that represents the meaning of a
+piece of text in a way that machine learning models can process. Embeddings are learned
+such that texts with similar meaning end up close together in the vector space, while
+unrelated texts end up far apart, regardless of whether they share the same words.
+
+Early embedding techniques, like TF-IDF, represented text as sparse vectors based on
+word frequency, capturing only lexical overlap. Latent Semantic Analysis improved on
+this by applying dimensionality reduction, such as singular value decomposition, to
+uncover latent topics that group co-occurring words together, giving a cheap, fully
+local approximation of semantic similarity.
+
+Modern neural embedding models, such as those built on transformer architectures, are
+trained on massive text corpora using contrastive objectives, pulling semantically
+similar pairs closer together and pushing dissimilar pairs apart. These models capture
+much richer semantic and even syntactic relationships than earlier bag-of-words methods.
+
+The quality of embeddings directly determines retrieval quality in a RAG system: if the
+embedding model fails to place a relevant passage near the query in vector space, no
+amount of downstream reranking or prompting can recover the information that was never
+retrieved in the first place.

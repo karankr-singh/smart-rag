@@ -16,6 +16,18 @@ corpus, and the default "LLM" is a mock generator so you can validate the
 retrieval pipeline in isolation. Swap in a real embedding model or the
 Anthropic API for production-quality generation whenever you're ready.
 
+## Demo
+
+The end-to-end demo indexes a sample corpus, retrieves relevant chunks for each query, and generates a grounded response from the retrieved context.
+
+![Smart RAG Demo](docs/screenshots/smart-rag-demo.jpg)
+
+## Retrieval Evaluation
+
+The demo also reports retrieval-quality metrics including Precision@k, Recall@k, MRR, and NDCG@k over the included evaluation queries.
+
+![Retrieval Evaluation](docs/screenshots/smart-rag-evaluation.jpg)
+
 ## Why these design choices
 
 | Problem | What this project does about it |
@@ -38,7 +50,7 @@ smart-rag/
 │   ├── bm25.py          # from-scratch Okapi BM25 keyword retrieval
 │   ├── retriever.py     # hybrid retrieval: RRF fusion + MMR + lexical rerank
 │   ├── llm.py           # pluggable generation backends (Mock + Anthropic API)
-│   ├── pipeline.py       # SmartRAG: the end-to-end orchestrator
+│   ├── pipeline.py      # SmartRAG: the end-to-end orchestrator
 │   └── evaluation.py    # Precision@k / Recall@k / MRR / NDCG@k
 ├── data/sample_docs/    # sample corpus (RAG, embeddings, vector DB explainers)
 ├── tests/test_rag.py    # pytest unit tests

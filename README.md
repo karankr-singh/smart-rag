@@ -26,7 +26,7 @@ The end-to-end demo indexes a sample corpus, retrieves relevant chunks for each 
 
 The demo also reports retrieval-quality metrics including Precision@k, Recall@k, MRR, and NDCG@k over the included evaluation queries.
 
-<img width="1289" height="566" alt="Smart RAG retrieval evaluation" src="https://github.com/user-attachments/assets/4c0b2991e153e5f7522bc42518163ba42e5cf66c" />
+<img width="1274" height="271" alt="Screenshot 2026-09-06 132028" src="https://github.com/user-attachments/assets/85aa38f7-dab0-4aa9-9b3f-1a419f758908" />
 
 ## Why these design choices
 
